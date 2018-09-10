@@ -1,0 +1,7 @@
+python-dotenv
+Flask
+Flask-SocketIO
+gevent
+gevent-websocket
+psycopg2-binary
+SQLAlchemy

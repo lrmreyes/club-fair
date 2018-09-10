@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Purr-suit</title>
+		<link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='style.css') }}">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+	</head>
+	<body>
+	<img id="bg" src="{{ url_for('static', filename='bg.png') }}">
+	<table class="highscores">
+        <!--Adds header if there are scores-->
+        {% if topscores is defined and topscores|length > 0 %}
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        {% endif %}
+        <tbody>
+        <!--Displays high scores-->
+        {% for score in topscores %}
+            <tr>
+                <td>{{ score.name }}</td>
+                <td>{{ score.score }}</td>
+            </tr>
+        <!--Displays this if there are no scores-->
+        {% else %}
+            <tr>
+                <td>No scores yet!</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="http://ide50-pshs-computron.cs50.io:8080"><div id="againBtn" style="display:block"></div></a>
+	</body>
+</html>

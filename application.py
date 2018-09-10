@@ -32,7 +32,7 @@ def leaderboard():
 @socketio.on("check score")
 def scorecheck(data):
     """Checks if the score is a high score."""
-    if db.execute("SELECT * FROM scores").rowcount == 0:
+    if db.execute("SELECT * FROM scores").rowcount < 10:
         emit("get name")
     else:
         breakpoint = db.execute("SELECT score FROM scores ORDER BY score ASC LIMIT 1").fetchone()[0]

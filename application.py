@@ -10,7 +10,7 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 socketio = SocketIO(app)
-database_url = 'postgres://gcdhcpnsoepjmq:97ae4d819dc9a2d94ab88e774f763f8231f2e0287f3ec8ff6eda23830afd76c0@ec2-50-17-194-186.compute-1.amazonaws.com:5432/d3t65lps6et59h'
+database_url = 'postgres://vysrlwhpdhuyxq:e306c8e308dc7790339d6037ef179cab11098d423dfc7dc059afbfee050aa3f0@ec2-75-101-153-56.compute-1.amazonaws.com:5432/d49d9cte5vk135'
 # Set up databases
 engine = create_engine(database_url)
 db = scoped_session(sessionmaker(bind=engine))

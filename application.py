@@ -14,7 +14,8 @@ database_url = 'postgres://gcdhcpnsoepjmq:97ae4d819dc9a2d94ab88e774f763f8231f2e0
 # Set up databases
 engine = create_engine(database_url)
 db = scoped_session(sessionmaker(bind=engine))
-
+port = int(os.environ.get("PORT", 5000))
+app.run(host='0.0.0.0', port=port)
 # Homepage
 @app.route('/')
 def index():

@@ -1,11 +1,10 @@
-Purr-suit
+# Purr-suit
 
-club-fair-game
+A simple JavaScript game with a leaderboard, made for Computron's club fair booth.
 
-Red laser: 1 point
+You're a cat that just loves lights! Move your cursor to each laser as fast as you can, and get as much points as possible!
 
-
-Blue laser: 1 point + 1 second
-
-
-Green laser: 3 points
+**Points system:**
+-Red laser: 1 point
+-Blue laser: 1 point + 1 second
+-Green laser: 3 points
